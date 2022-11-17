@@ -1,9 +1,8 @@
 import puppeteer from "puppeteer";
-import dotenv from "dotenv";
 import fs from "fs";
 import PDFDocument from "pdfkit";
 
-dotenv.config();
+const LINK = "https://github.com/";
 
 const path: string[] = [
   "nutthanonn",
@@ -23,7 +22,7 @@ const path: string[] = [
 
   for (let i = 0; i < path.length; i++) {
     console.log(`Start capture ${path[i]}`);
-    await page.goto(`${process.env.LINK as string}/${path[i]}`, {
+    await page.goto(`${LINK}/${path[i]}`, {
       waitUntil: "networkidle2",
     });
     await page.screenshot({

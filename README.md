@@ -1,7 +1,6 @@
 # capture-website-to-pdf
 
-### setup env
-
 ```
-LINK=""
+npm install
+npm run dev
 ```
